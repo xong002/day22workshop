@@ -19,7 +19,7 @@ public class RSVPRepo {
     private final String countSQL = "select count(*) from rsvp";
     private final String findAllSQL = "select * from rsvp";
     private final String findByIdSQL = "select * from rsvp where id = ?";
-    private final String insertSQL = "insert into rspv (full_name, email, phone, confirmation_date, comments) values (?,?,?,?,?)";
+    private final String insertSQL = "insert into rsvp (full_name, email, phone, confirmation_date, comments) values (?,?,?,?,?)";
     private final String updateSQL = "update rsvp set email = ?, phone = ?, confirmation_date = ? where id = ?";
 
     public int count() {
@@ -52,5 +52,7 @@ public class RSVPRepo {
                 rsvp.getConfirmationDate(), rsvp.getId());
         return iResult > 0 ? true : false;
     }
+
+    //write function for batch insert - day22 slide17
 
 }
