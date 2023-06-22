@@ -11,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 
 import sg.nus.iss.day22workshop.model.RSVP;
 
-@Service
 public class RSVPRestTemplate {
     
     private static final String RSVP_ENDPOINT_URL = "http://localhost:4000/api/rsvps";

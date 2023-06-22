@@ -16,8 +16,11 @@ import sg.nus.iss.day22workshop.model.RSVP;
 @RequestMapping("/rsvps")
 public class RSVPUIController {
     
-    @Autowired
     RSVPRestTemplate restTemplate;
+
+    public RSVPUIController(){
+        restTemplate = new RSVPRestTemplate();
+    }
 
     @GetMapping("/add")
     public String RSVPAdd(Model model){
